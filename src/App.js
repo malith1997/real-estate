@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React from 'react';
+import Home from './Pages/Home';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Routes,
+  Redirect
+} from "react-router-dom";
+
+import Rent from './Pages/Rent';
+import Sell from './Pages/Sell';
+import OffPlan from './Pages/OffPlan';
+import ListProperty from './Pages/ListProperty';
+import Blog from './Pages/Blog';
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+      <Router>
+
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/Rent" element={<Rent />} />
+        <Route path="/Sell" element={<Sell />} />
+        <Route path="/OffPlan" element={<OffPlan />} />
+        <Route path="/ListProperty" element={<ListProperty />} />
+        <Route path="/Blog" element={<Blog />} />
+       
+       
+      </Routes>
+    </Router>
+
+
+    
   );
 }
 
