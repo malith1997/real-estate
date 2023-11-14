@@ -13,7 +13,6 @@ function Nav() {
     return(   
         
         <header>
-            <h2>Real-estate</h2>
             <nav ref={navRef}>
   
                     <Link to="/">Home</Link>
